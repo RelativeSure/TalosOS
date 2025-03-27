@@ -1,0 +1,9 @@
+variable "talos_version" {
+  type    = string
+  default = "v1.9.5"
+}
+
+variable "HCLOUD_TOKEN" {
+  type = string
+  sensitive = true
+}
