@@ -1,11 +1,12 @@
 version: '2.1'
 
 orbs:
-  megalinter: relativesure/megalinter@2.0.0
+  megalinter: relativesure/megalinter@2.1.0
 
 workflows:
   run-megalinter:
     jobs:
       - megalinter/run:
+          flavor: terraform
           context:
             - Main Context
