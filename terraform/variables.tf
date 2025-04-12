@@ -7,3 +7,8 @@ variable "HCLOUD_TOKEN" {
   type = string
   sensitive = true
 }
+
+variable "PRIVATE_HOME_IP" {
+  type = list(string)
+  sensitive = true
+}
