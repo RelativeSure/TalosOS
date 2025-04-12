@@ -3,8 +3,8 @@ module "talos" {
   version                   = "2.13.3"
   talos_version             = "1.9.5"
   firewall_use_current_ip   = false
-  firewall_kube_api_source  = ["home-ip"]
-  firewall_talos_api_source = ["home-ip"]
+  firewall_kube_api_source  = var.PRIVATE_HOME_IP
+  firewall_talos_api_source = var.PRIVATE_HOME_IP
   cluster_name              = "broegger.dk"
   cluster_domain            = "cluster.broegger.dk.local"
   cluster_api_host          = "kube.broegger.dk"
