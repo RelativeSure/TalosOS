@@ -4,11 +4,11 @@ variable "talos_version" {
 }
 
 variable "HCLOUD_TOKEN" {
-  type = string
+  type      = string
   sensitive = true
 }
 
 variable "PRIVATE_HOME_IP" {
-  type = list(string)
+  type      = list(string)
   sensitive = true
 }
