@@ -5,9 +5,9 @@ module "talos" {
   firewall_use_current_ip   = false
   firewall_kube_api_source  = var.PRIVATE_HOME_IP
   firewall_talos_api_source = var.PRIVATE_HOME_IP
-  cluster_name              = "broegger.dk"
-  cluster_domain            = "cluster.broegger.dk.local"
-  cluster_api_host          = "kube.broegger.dk"
+  cluster_name              = var.CLUSTER_NAME
+  cluster_domain            = "cluster.${var.CLUSTER_NAME}.local"
+  cluster_api_host          = "kube.${var.CLUSTER_NAME}"
   datacenter_name           = "fsn1-dc14"
   control_plane_count       = 1
   control_plane_server_type = "cpx11"

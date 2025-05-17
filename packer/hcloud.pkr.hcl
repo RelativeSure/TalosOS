@@ -1,13 +1,13 @@
 locals {
-  image = "https://factory.talos.dev/image/16be1838458a3d9947f2fdc33fa1280bd071e41488573ffe5bae21c9fadd57ee/${var.talos_version}/hcloud-${var.arch}.raw.xz"
+  image = "https://factory.talos.dev/image/7fe50f59701f9f5a2305b8b7c099ec6ad91f93dbf8c430c1260d520e149383c9/${var.talos_version}/hcloud-${var.arch}.raw.xz"
 }
 
 source "hcloud" "talos" {
-  rescue       = "linux64"
-  image        = "debian-12"
-  location     = "${var.server_location}"
-  server_type  = "${var.server_type}"
-  ssh_username = "root"
+  rescue          = "linux64"
+  image           = "debian-12"
+  location        = "${var.server_location}"
+  server_type     = "${var.server_type}"
+  ssh_username    = "root"
   snapshot_name   = "talos system disk - ${var.arch} - ${var.talos_version}"
   snapshot_labels = {
     type    = "infra",

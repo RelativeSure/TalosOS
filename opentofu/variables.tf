@@ -12,3 +12,7 @@ variable "PRIVATE_HOME_IP" {
   type      = list(string)
   sensitive = true
 }
+
+variable "CLUSTER_NAME" {
+  type      = string
+}
