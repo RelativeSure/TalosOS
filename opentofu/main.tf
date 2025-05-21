@@ -3,8 +3,10 @@ module "talos" {
   version                   = "2.13.3"
   talos_version             = "1.9.5"
   firewall_use_current_ip   = false
-  firewall_kube_api_source  = concat(var.PRIVATE_HOME_IP, tolist(data.spacelift_ips.ips.ips))
-  firewall_talos_api_source = concat(var.PRIVATE_HOME_IP, tolist(data.spacelift_ips.ips.ips))
+  # firewall_kube_api_source  = concat(var.PRIVATE_HOME_IP, tolist(data.spacelift_ips.ips.ips))
+  # firewall_talos_api_source = concat(var.PRIVATE_HOME_IP, tolist(data.spacelift_ips.ips.ips))
+  firewall_kube_api_source  = var.PRIVATE_HOME_IP
+  firewall_talos_api_source = var.PRIVATE_HOME_IP
   cluster_name              = var.CLUSTER_NAME
   cluster_domain            = "cluster.${var.CLUSTER_NAME}.local"
   cluster_api_host          = "kube.${var.CLUSTER_NAME}"

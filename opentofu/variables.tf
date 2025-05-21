@@ -17,17 +17,17 @@ variable "CLUSTER_NAME" {
   type      = string
 }
 
-variable "SPACELIFT_API_KEY_ENDPOINT" {
-  type        = string
-  sensitive   = true
-}
+# variable "SPACELIFT_API_KEY_ENDPOINT" {
+#   type        = string
+#   sensitive   = true
+# }
 
-variable "SPACELIFT_API_KEY_ID" {
-  type        = string
-  sensitive   = true
-}
+# variable "SPACELIFT_API_KEY_ID" {
+#   type        = string
+#   sensitive   = true
+# }
 
-variable "SPACELIFT_API_KEY_SECRET" {
-  type        = string
-  sensitive   = true
-}
+# variable "SPACELIFT_API_KEY_SECRET" {
+#   type        = string
+#   sensitive   = true
+# }

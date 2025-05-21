@@ -1,1 +1,1 @@
-data "spacelift_ips" "ips" {}
+# data "spacelift_ips" "ips" {}
