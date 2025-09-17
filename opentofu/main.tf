@@ -1,6 +1,6 @@
 module "talos" {
   source                    = "hcloud-talos/talos/hcloud"
-  version                   = "2.18.0"
+  version                   = "2.19.0"
   talos_version             = "1.9.5"
   firewall_use_current_ip   = false
   # firewall_kube_api_source  = concat(var.PRIVATE_HOME_IP, tolist(data.spacelift_ips.ips.ips))
